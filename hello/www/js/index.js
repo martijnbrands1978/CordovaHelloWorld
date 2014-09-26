@@ -63,3 +63,10 @@ window.plugins.flashlight.available(function(isAvailable) {
     alert("Flashlight not available on this device");
   }
 });
+
+function toggleLight() {
+	window.plugins.flashlight.switchOn();
+	setTimeout(function() {
+	      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
+    }, 3000);
+}
