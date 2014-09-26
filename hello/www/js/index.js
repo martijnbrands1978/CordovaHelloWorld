@@ -53,11 +53,12 @@ window.plugins.flashlight.available(function(isAvailable) {
 
     // switch on
     window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
-
+    console.log('Light on');
     // switch off after 3 seconds
     setTimeout(function() {
       window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
     }, 3000);
+    console.log('Light off');
 
   } else {
     alert("Flashlight not available on this device");
