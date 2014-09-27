@@ -67,14 +67,15 @@ window.plugins.flashlight.available(function(isAvailable) {
 
 function appendDebug(message) {
     var debug = document.getElementById('debug');
-    debug.innerHTML = debug.innerHTML + ' ' + message;
+    debug.innerHTML = debug.innerHTML + ' ' + message + '<br>';
 }
 
 function toggleLight() {
 	window.plugins.flashlight.switchOn();
         appendDebug('Light on');
 	setTimeout(function() {
-	      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
+	      window.plugins.flashlight.switchOff();
+	      appendDebug('Light of'); // success/error callbacks may be passed
     }, 3000);
-       appendDebug('Light of');
+       
 }
