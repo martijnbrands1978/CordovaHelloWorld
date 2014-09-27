@@ -65,9 +65,16 @@ window.plugins.flashlight.available(function(isAvailable) {
   }
 });
 
+function appendDebug(message) {
+    var debug = document.getElementById('debug');
+    debug.innerHTML = debug.innerHTML + ' ' + message;
+}
+
 function toggleLight() {
 	window.plugins.flashlight.switchOn();
+        appendDebug('Light on');
 	setTimeout(function() {
 	      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
     }, 3000);
+       appendDebug('Light of');
 }
