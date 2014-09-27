@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        checkLed();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -48,22 +49,24 @@ var app = {
     }
 };
 
-window.plugins.flashlight.available(function(isAvailable) {
-  if (isAvailable) {
+function checkLed() {
+    window.plugins.flashlight.available(function (isAvailable) {
+        if (isAvailable) {
 
-    // switch on
-    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
-    console.log('Light on');
-    // switch off after 3 seconds
-    setTimeout(function() {
-      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
-    }, 3000);
-    console.log('Light off');
+            // switch on
+            window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
+            console.log('Light on');
+            // switch off after 3 seconds
+            setTimeout(function () {
+                window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
+            }, 3000);
+            console.log('Light off');
 
-  } else {
-    alert("Flashlight not available on this device");
-  }
-});
+        } else {
+            alert("Flashlight not available on this device");
+        }
+    });
+}
 
 function appendDebug(message) {
     var debug = document.getElementById('debug');
