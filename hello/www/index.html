@@ -33,16 +33,29 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div data-role="page" id="home">
-            <div data-role="header">
-                <h4>Header</h4>
-            </div>
+        <div data-role="header" data-position="fixed">
+            <h4>Hello FlasLight</h4>
+        </div>
+
+        <div data-role="page">
+
             <div data-role="content">
-                <p>Content goes here</p>
+
+                <div id="deviceready" class="blink">
+                    <p class="event listening">Connecting to Device</p>
+                    <p class="event received">Device is Ready</p>
+                </div>
+
+                <button data-role="button" onclick="toggleLight()">Light On</button>
+
+
+                <div id="debug"></div>
+
             </div>
-            <div data-role="footer">
-                <h4>Footer</h4>
-            </div>
+            
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Copright, Utrecht 2014</h4>
         </div>
 
             <script type="text/javascript" src="js/index.js"></script>
