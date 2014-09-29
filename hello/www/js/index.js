@@ -76,3 +76,8 @@ function toggleLight() {
     }, 3000);
        
 }
+
+function openExternalSite() {
+
+    var ref = window.open('http://192.168.178.13:52878', '_blank', 'location=yes');
+}
