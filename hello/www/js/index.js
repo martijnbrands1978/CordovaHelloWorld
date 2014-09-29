@@ -79,5 +79,5 @@ function toggleLight() {
 
 function openExternalSite() {
 
-    var ref = window.open('http://192.168.178.13:52878', '_blank', 'location=yes');
+    var ref = window.open('http://192.168.178.13:52878', '_blank', 'location=no');
 }
