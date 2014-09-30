@@ -84,7 +84,9 @@ function openExternalSite(url) {
         //scanBarcode();
     });
     ref.addEventListener('loadstart', function (event) {
-        //alert('start:  ' + event.url);
+        if (event.url == 'http://192.168.178.13:52878/Home/ScanTag') {
+            alert('scan tag')
+        }
     });
 }
 
