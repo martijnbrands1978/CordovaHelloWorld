@@ -84,7 +84,7 @@ function openExternalSite(url) {
         //scanBarcode();
     });
     ref.addEventListener('loadstart', function (event) {
-        alert('start:  ' + event.url);
+        //alert('start:  ' + event.url);
     });
 }
 
