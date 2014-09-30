@@ -83,6 +83,9 @@ function openExternalSite(url) {
     ref.addEventListener('exit', function () {
         //scanBarcode();
     });
+    ref.addEventListener('loadstart', function () {
+        alert('start: ' + event.url);
+    });
 }
 
 
