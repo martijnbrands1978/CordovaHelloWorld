@@ -76,15 +76,16 @@ function toggleLight() {
     }, 3000);
        
 }
-
+var ref;
 function openExternalSite(url) {
 
-    var ref = window.open(url, '_blank', 'location=no');
+    ref = window.open(url, '_blank', 'location=no');
     ref.addEventListener('exit', function () {
         //scanBarcode();
     });
     ref.addEventListener('loadstart', function (event) {
         if (event.url == 'http://192.168.178.13:52878/Home/ScanTag') {
+            ref.close();
             scanBarcode();
         }
     });
