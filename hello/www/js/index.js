@@ -101,12 +101,7 @@ function scanBarcode() {
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
           if (!result.cancelled) {
-              if(parseInt(result.text) == 8712566269907)
-                  openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text)
-              if (parseInt(result.text) == 87315943)
-                  openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text)
-              if (parseInt(result.text) == 8711600608214)
-                  openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text)
+              openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text);
           }
       },
       function (error) {
