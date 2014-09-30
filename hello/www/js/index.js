@@ -97,7 +97,9 @@ function scanBarcode() {
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
-          openExternalSite('http://www.lipton.nl')
+          if (!result.cancelled) {
+              openExternalSite('http://www.lipton.nl')
+          }
       },
       function (error) {
           alert("Scanning failed: " + error);
