@@ -77,9 +77,9 @@ function toggleLight() {
        
 }
 
-function openExternalSite() {
+function openExternalSite(url) {
 
-    var ref = window.open('http://192.168.178.13:52878', '_blank', 'location=no');
+    var ref = window.open(url, '_blank', 'location=no');
 }
 
 function scanBarcode() {
@@ -89,6 +89,7 @@ function scanBarcode() {
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
+          openExternalSite('http://www.lipton.nl')
       },
       function (error) {
           alert("Scanning failed: " + error);
