@@ -99,11 +99,11 @@ function scanBarcode() {
                 "Cancelled: " + result.cancelled);
           if (!result.cancelled) {
               if(parseInt(result.text) == 8712566269907)
-                  openExternalSite('http://www.lipton.nl')
+                  openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text)
               if (parseInt(result.text) == 87315943)
-                  openExternalSite('http://www.etos.nl')
+                  openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text)
               if (parseInt(result.text) == 8711600608214)
-                  openExternalSite('http://www.andrelon.nl')
+                  openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text)
           }
       },
       function (error) {
