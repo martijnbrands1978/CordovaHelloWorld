@@ -76,15 +76,16 @@ function toggleLight() {
     }, 3000);
        
 }
-var ref;
+
 function openExternalSite(url) {
 
-    ref = window.open(url, '_blank', 'location=no');
+    var ref = window.open(url, '_blank', 'location=no');
+    ref.addEventListener('exit', function () {
+        scanBarcode();
+    });
 }
 
-ref.addEventListener('exit', function () {
-    scanBarcode();
-});
+
 
 function scanBarcode() {
     cordova.plugins.barcodeScanner.scan(
