@@ -81,7 +81,7 @@ function openExternalSite(url) {
 
     var ref = window.open(url, '_blank', 'location=no');
     ref.addEventListener('exit', function () {
-        scanBarcode();
+        //scanBarcode();
     });
 }
 
