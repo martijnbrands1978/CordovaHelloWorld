@@ -81,3 +81,17 @@ function openExternalSite() {
 
     var ref = window.open('http://192.168.178.13:52878', '_blank', 'location=no');
 }
+
+function scanBarcode() {
+    cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          appendDebug("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      },
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+}
