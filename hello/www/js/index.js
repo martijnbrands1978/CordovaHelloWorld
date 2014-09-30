@@ -98,7 +98,12 @@ function scanBarcode() {
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
           if (!result.cancelled) {
-              openExternalSite('http://www.lipton.nl')
+              if(parseInt(result.text) == 8712566269907)
+                  openExternalSite('http://www.lipton.nl')
+              if (parseInt(result.text) == 87315943)
+                  openExternalSite('http://www.etos.nl')
+              if (parseInt(result.text) == 8711600608214)
+                  openExternalSite('http://www.andrelon.nl')
           }
       },
       function (error) {
