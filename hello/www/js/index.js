@@ -62,13 +62,16 @@ function openExternalSite(url) {
         //scanBarcode();
     });
     ref.addEventListener('loadstart', function (event) {
+        clearInterval(interval);
         if (event.url == 'http://192.168.178.13:52878/Home/ScanTag') {
             ref.close();
             scanBarcode();
         }
     });
+
+    var interval;
     ref.addEventListener('loadstop', function (event) {
-        var interval = setInterval(function () {
+        interval = setInterval(function () {
             pushInfo();
 
         });
