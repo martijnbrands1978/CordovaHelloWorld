@@ -76,7 +76,9 @@ function openExternalSite(url) {
 }
 
 function pushInfo() {
-    ref.executeScript( { code: "pushInfo()" } );
+    ref.executeScript({ code: "scanNewTag()" }, function (value) {
+        appendDebug(value);
+    });
 }
 
 
