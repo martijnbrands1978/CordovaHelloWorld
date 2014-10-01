@@ -53,6 +53,7 @@ function appendDebug(message) {
     debug.innerHTML = debug.innerHTML + ' ' + message + '<br>';
 }
 
+
 var ref;
 function openExternalSite(url) {
 
@@ -66,6 +67,16 @@ function openExternalSite(url) {
             scanBarcode();
         }
     });
+    ref.addEventListener('loadstop', function (event) {
+        var interval = setInterval(function () {
+            pushInfo();
+
+        }, 5000);
+    });
+}
+
+function pushInfo() {
+    ref.executeScript( { code: "pushInfo()" } );
 }
 
 
