@@ -78,6 +78,7 @@ function openExternalSite(url) {
 function pushInfo() {
     ref.executeScript({ code: "scanNewTag()" }, function (value) {
         if (value == 'newscan') {
+            ref.close();
             scanBarcode();
         }
     });
