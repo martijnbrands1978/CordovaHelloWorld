@@ -71,7 +71,7 @@ function openExternalSite(url) {
         var interval = setInterval(function () {
             pushInfo();
 
-        }, 5000);
+        });
     });
 }
 
