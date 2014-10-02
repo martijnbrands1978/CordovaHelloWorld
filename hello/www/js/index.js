@@ -40,7 +40,8 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-
+		window.location = "http://www.nu.nl";
+    	appendDebug('google loaded');
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
     }
@@ -54,8 +55,7 @@ function appendDebug(message) {
 
 var ref;
 function openExternalSite(url) {
-	window.location = "http://www.google.com";
-    appendDebug('google loaded');
+
     //ref = window.open(url, '_blank', 'location=no');
     //ref.addEventListener('exit', function () {
         //scanBarcode();
