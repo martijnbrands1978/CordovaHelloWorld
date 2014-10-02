@@ -43,7 +43,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-        window.location = "http://www.telegraaf.nl";
+        window.location = "http://google.com";
         appendDebug('nu.nl loaded');
     }
 };
