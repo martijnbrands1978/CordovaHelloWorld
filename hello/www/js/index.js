@@ -44,7 +44,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
         window.location = "http://www.nu.nl";
-        console.log('Received Event: ' + id);
+        appendDebug('nu.nl loaded');
     }
 };
 
