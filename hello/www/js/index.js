@@ -43,8 +43,6 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-        window.location = "http://www.google.com";
-        appendDebug('google loaded');
     }
 };
 
@@ -56,26 +54,27 @@ function appendDebug(message) {
 
 var ref;
 function openExternalSite(url) {
-
-    ref = window.open(url, '_blank', 'location=no');
-    ref.addEventListener('exit', function () {
+	window.location = "http://www.google.com";
+    appendDebug('google loaded');
+    //ref = window.open(url, '_blank', 'location=no');
+    //ref.addEventListener('exit', function () {
         //scanBarcode();
-    });
-    ref.addEventListener('loadstart', function (event) {
-        clearInterval(interval);
-        if (event.url == 'http://192.168.178.13:52878/Home/ScanTag') {
-            ref.close();
-            scanBarcode();
-        }
-    });
+    //});
+    //ref.addEventListener('loadstart', function (event) {
+        //clearInterval(interval);
+        //if (event.url == 'http://192.168.178.13:52878/Home/ScanTag') {
+            //ref.close();
+            //scanBarcode();
+        //}
+    //});
 
-    var interval;
-    ref.addEventListener('loadstop', function (event) {
-        interval = setInterval(function () {
-            pushInfo();
+    //var interval;
+    //ref.addEventListener('loadstop', function (event) {
+        //interval = setInterval(function () {
+            //pushInfo();
 
-        });
-    });
+        //});
+    //});
 }
 
 function pushInfo() {
