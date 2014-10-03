@@ -35,33 +35,8 @@
     <body>
 
 
-        <div data-role="page">
-            <div data-role="header" data-position="fixed">
-                <h4>Hello FlasLight</h4>
-            </div>
+            <div id="remoteContent"></div>
 
-            <div data-role="content">
-
-                <div id="deviceready" class="blink">
-                    <p class="event listening">Connecting to Device</p>
-                    <p class="event received">Device is Ready</p>
-                </div>
-
-                <button data-role="button" onclick="openExternalSite('http://www.google.com')">Open Website</button>
-                <button data-role="button" onclick="scanBarcode()">Scan Barcode</button>
-                <button data-role="button" onclick="loadRemoteContent()">Remote Content</button>
-
-				<img src="img/klappen.gif"/>
-
-                <div id="remoteContent"></div>
-                <div id="debug"></div>
-
-            </div>
-            <div data-role="footer" data-position="fixed">
-                <h4>Copright, Utrecht 2014</h4>
-            </div>
-
-        </div>
 
 
             <script type="text/javascript" src="js/index.js"></script>
