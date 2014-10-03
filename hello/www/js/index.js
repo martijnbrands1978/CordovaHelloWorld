@@ -87,6 +87,11 @@ function pushInfo() {
     });
 }
 
+function loadRemoteContent() {
+    $("#remoteContent").load("http://192.168.178.13:52878/Home/RemoteContent");
+
+}
+
 
 
 function scanBarcode() {
