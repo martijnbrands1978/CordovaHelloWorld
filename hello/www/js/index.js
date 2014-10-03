@@ -41,8 +41,8 @@ var app = {
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
         //window.location = "http://192.168.178.13:52878/Home/TagInfo";
-        window.location = "https://google.com";
-    	appendDebug('google loaded');
+        //window.location = "https://google.com";
+    	//appendDebug('google loaded');
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
     }
