@@ -40,6 +40,7 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+        loadRemoteContent();
         //window.location = "http://192.168.178.13:52878/Home/TagInfo";
         //window.location = "https://google.com";
     	//appendDebug('google loaded');
