@@ -108,5 +108,4 @@ function scanBarcode() {
           alert("Scanning failed: " + error);
       }
    );
-    return resultText;
 }
