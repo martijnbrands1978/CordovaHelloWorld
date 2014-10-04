@@ -99,19 +99,17 @@ function alarmPhone() {
 
 
 function scanBarcode() {
-    var resultText;
-    cordova.plugins.barcodeScanner.scan(
+    return cordova.plugins.barcodeScanner.scan(
       function (result) {
           //appendDebug("We got a barcode\n" +
                 //"Result: " + result.text + "\n" +
                 //"Format: " + result.format + "\n" +
                // "Cancelled: " + result.cancelled);
           //alert(result.text);
-          resultText = result.text;
+          return result.text;
       },
       function (error) {
           alert("Scanning failed: " + error);
       }
    );
-    return resultText;
 }
