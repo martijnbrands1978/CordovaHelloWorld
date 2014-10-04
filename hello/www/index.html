@@ -29,54 +29,21 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery_mobile/themes/default/jquery.mobile.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
 
 
 
-        <title>Hello World!!</title>
+        <title>Barcode App</title>
     </head>
-    <body>
-
-        <div data-role="page">
-            <div data-role="header" data-position="fixed">
-                <h4>Hello FlasLight</h4>
-            </div>
-
-            <div data-role="content">
-
-                <div id="deviceready" class="blink">
-                    <p class="event listening">Connecting to Device</p>
-                    <p class="event received">Device is Ready</p>
-                </div>
-
-                <button data-role="button" onclick="openExternalSite('http://www.google.com')">Open Website</button>
-                <button data-role="button" onclick="scanBarcode()">Scan Barcode</button>
-                <button data-role="button" onclick="loadRemoteContent()">Remote Content</button>
-                <a href="#remoteContent" data-role="button" data-transition="flow">Show page "two"</a>
-
-
-                <div id="debug"></div>
-
-            </div>
-            <div data-role="footer" data-position="fixed">
-                <h4>Copright, Utrecht 2014</h4>
-            </div>
-
-        </div>
-        <div id="remoteContent" data-role="page"></div>
-
-
-
+    <body id="mainbody">
             
-
-
-            
-</body>
+    </body>
 </html>

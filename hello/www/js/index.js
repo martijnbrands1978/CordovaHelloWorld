@@ -37,15 +37,15 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        //var parentElement = document.getElementById(id);
+        //var listeningElement = parentElement.querySelector('.listening');
+        //var receivedElement = parentElement.querySelector('.received');
         loadRemoteContent();
         //window.location = "http://192.168.178.13:52878/Home/TagInfo";
         //window.location = "https://google.com";
     	//appendDebug('google loaded');
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        //listeningElement.setAttribute('style', 'display:none;');
+        //receivedElement.setAttribute('style', 'display:block;');
     }
 };
 
@@ -89,7 +89,7 @@ function pushInfo() {
 }
 
 function loadRemoteContent() {
-    $("#remoteContent").load("http://192.168.178.13:52878/Home/RemoteContent");
+    $("#mainbody").load("http://192.168.178.13:52878/Home/RemoteContent");
 
 }
 
