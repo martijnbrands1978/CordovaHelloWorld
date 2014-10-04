@@ -96,15 +96,13 @@ function loadRemoteContent() {
 
 
 function scanBarcode() {
-    var resultText;
     cordova.plugins.barcodeScanner.scan(
       function (result) {
           appendDebug("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
-          resultText = result.text;
-          alert(resultText);
+          alert(result.text);
       },
       function (error) {
           alert("Scanning failed: " + error);
