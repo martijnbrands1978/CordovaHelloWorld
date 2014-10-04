@@ -93,6 +93,9 @@ function loadRemoteContent() {
 
 }
 
+function alarmPhone() {
+    alert('alarm');
+}
 
 
 function scanBarcode() {
