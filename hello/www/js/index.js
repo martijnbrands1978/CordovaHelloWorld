@@ -96,18 +96,19 @@ function loadRemoteContent() {
 
 
 function scanBarcode() {
+    var resultText;
     cordova.plugins.barcodeScanner.scan(
       function (result) {
           appendDebug("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
-          if (!result.cancelled) {
-              openExternalSite('http://192.168.178.13:52878/Home/TagInfo?id=' + result.text);
-          }
+          resultText = result.text;
+          alert(resultText);
       },
       function (error) {
           alert("Scanning failed: " + error);
       }
    );
+    return resultText;
 }
