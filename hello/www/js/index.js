@@ -106,7 +106,8 @@ function scanBarcode() {
                 //"Format: " + result.format + "\n" +
                // "Cancelled: " + result.cancelled);
           //alert(result.text);
-          setResult(result.text);
+          //setResult(result.text);
+          scannSuccesCallBack(result.text);
       },
       function (error) {
           alert("Scanning failed: " + error);
