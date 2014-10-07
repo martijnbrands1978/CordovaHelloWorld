@@ -57,7 +57,8 @@ function appendDebug(message) {
 
 function onNfc(nfcEvent) {
     // display the tag as JSON
-    scannSuccesCallBack(JSON.stringify(nfcEvent.tag));
+    //scannSuccesCallBack(JSON.stringify(nfcEvent.tag));
+    alert(JSON.stringify(nfcEvent.tag));
 }
 
 function success(result) {
