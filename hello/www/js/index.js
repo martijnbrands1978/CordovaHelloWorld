@@ -42,6 +42,13 @@ var app = {
         //var receivedElement = parentElement.querySelector('.received');
         loadRemoteContent();
         nfc.addNdefListener(onNfc, success, failure);
+        nfc.addTagDiscoveredListener(
+                onNfc,
+                function () {
+                    console.log("Listening for non-NDEF tags.");
+                },
+                failure
+            );
         //window.location = "http://192.168.178.13:52878/Home/TagInfo";
         //window.location = "https://google.com";
     	//appendDebug('google loaded');
