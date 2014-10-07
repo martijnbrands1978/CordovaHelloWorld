@@ -41,6 +41,7 @@ var app = {
         //var listeningElement = parentElement.querySelector('.listening');
         //var receivedElement = parentElement.querySelector('.received');
         loadRemoteContent();
+        nfc.addNdefListener(onNfc, success, failure);
         //window.location = "http://192.168.178.13:52878/Home/TagInfo";
         //window.location = "https://google.com";
     	//appendDebug('google loaded');
@@ -52,6 +53,18 @@ var app = {
 function appendDebug(message) {
     var debug = document.getElementById('debug');
     debug.innerHTML = debug.innerHTML + ' ' + message + '<br>';
+}
+
+function onNfc(nfcEvent) {
+    // display the tag as JSON
+    scannSuccesCallBack(JSON.stringify(nfcEvent.tag));
+}
+
+function success(result) {
+    alert("Listening for NFC Messages");
+}
+function failure(reason) {
+    alert("Failed to add NDEF listener");
 }
 
 
