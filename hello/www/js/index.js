@@ -51,7 +51,7 @@ function failure(reason) {
 
 function loadRemoteContent() {
     //$("#mainbody").load("http://192.168.178.12:52878/Home/RemoteContent");
-    $("#mainbody").Html("<h1>App running</h1>");
+    $("#mainbody").html("<h1>App running</h1>");
 
 }
 
