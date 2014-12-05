@@ -19,7 +19,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        //loadRemoteContent();
+        loadRemoteContent();
         nfc.addNdefListener(onNfc, success, failure);
         nfc.addTagDiscoveredListener(
                 onNfc,
