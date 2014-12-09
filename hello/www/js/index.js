@@ -50,7 +50,7 @@ function failure(reason) {
 }
 
 function loadRemoteContent() {
-    $("#mainbody").load("http://192.168.178.12:52878/Home/RemoteContent");
+    $("#mainbody").load("http://192.168.178.11:52878/Home/RemoteContent");
     //alert("hello");
     //$("#h01").html("Hello jQuery");
 
